@@ -11,9 +11,9 @@ namespace AoC
         }
         
 
-        public override string GetAnswerOne()
+        public override object GetAnswerOne()
         {
-            long[] values = Lines.Select(it => Convert.ToInt64((string?) it)).ToArray();
+            long[] values = Lines.Select(it => Convert.ToInt64(it)).ToArray();
 
             long valueToFind = 2020;
 
@@ -25,14 +25,14 @@ namespace AoC
 
                 if (values.Any(it => it != val1 && it == val2))
                 {
-                    return (val1 * val2).ToString();
+                    return (val1 * val2);
                 }
             }
 
             return base.GetAnswerOne();
         }
 
-        public override string GetAnswerTwo()
+        public override object GetAnswerTwo()
         {
             long[] values = Lines.Select(it => Convert.ToInt64(it)).ToArray();
 
@@ -52,11 +52,9 @@ namespace AoC
 
                     if (values.Any(it => it != val1 && it != val2 && it == val3))
                     {
-                        return (val1 * val2 * val3).ToString();
+                        return (val1 * val2 * val3);
                     }
                 }
-
-                
             }
 
             return base.GetAnswerTwo();

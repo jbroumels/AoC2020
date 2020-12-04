@@ -6,17 +6,20 @@ namespace AoC
     {
         protected readonly string[] Lines;
 
+        public string PuzzleNumber { get; private set; }
+
         public Puzzle(string puzzleNumber)
         {
+            PuzzleNumber = puzzleNumber;
             Lines = File.ReadAllLines($"{puzzleNumber}.txt");
         }
 
-        public virtual string GetAnswerOne()
+        public virtual object GetAnswerOne()
         {
             return "?";
         }
 
-        public virtual string GetAnswerTwo()
+        public virtual object GetAnswerTwo()
         {
             return "?";
         }

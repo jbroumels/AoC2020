@@ -10,18 +10,18 @@ namespace AoC
 
         }
 
-        public override string GetAnswerOne()
+        public override object GetAnswerOne()
         {
             PasswordLine[] passwordLines = Lines.Select(it => new PasswordLine(it)).ToArray();
 
-            return passwordLines.Count(it => it.IsValid()).ToString();
+            return passwordLines.Count(it => it.IsValid());
         }
 
-        public override string GetAnswerTwo()
+        public override object GetAnswerTwo()
         {
             PasswordLine[] passwordLines = Lines.Select(it => new PasswordLine(it)).ToArray();
 
-            return passwordLines.Count(it => it.IsValid2()).ToString();
+            return passwordLines.Count(it => it.IsValid2());
         }
 
         public class PasswordLine

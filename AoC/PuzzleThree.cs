@@ -6,17 +6,17 @@
         {
         }
 
-        public override string GetAnswerOne()
+        public override object GetAnswerOne()
         {
             int y = 0;
             int x = 0;
 
             int jumpX = 3;
             int jumpY = 1;
-            return GetAnswer(x,y, jumpX, jumpY).ToString();
+            return GetAnswer(x,y, jumpX, jumpY);
         }
 
-        public override string GetAnswerTwo()
+        public override object GetAnswerTwo()
         {
             int y = 0;
             int x = 0;
@@ -27,7 +27,7 @@
             answer2 = answer2 * GetAnswer(x, y, 7, 1);
             answer2 = answer2 * GetAnswer(x, y, 1, 2);
 
-            return answer2.ToString();
+            return answer2;
         }
 
 

@@ -10,18 +10,18 @@ namespace AoC
 
         }
 
-        public override string GetAnswerOne()
+        public override object GetAnswerOne()
         {
             PassportDetails[] passports = ReadPassports().ToArray();
 
-            return passports.Count(it => it.IsValid1()).ToString();
+            return passports.Count(it => it.IsValid1());
         }
 
-        public override string GetAnswerTwo()
+        public override object GetAnswerTwo()
         {
             PassportDetails[] passports = ReadPassports().ToArray();
 
-            return passports.Count(it => it.IsValid2()).ToString();
+            return passports.Count(it => it.IsValid2());
         }
 
         private IEnumerable<PassportDetails> ReadPassports()

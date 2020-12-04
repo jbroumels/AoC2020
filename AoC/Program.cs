@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace AoC
 {
@@ -11,8 +12,21 @@ namespace AoC
             //Puzzle puzzle = new PuzzleThree();
             Puzzle puzzle = new PuzzleFour();
 
-            Console.WriteLine("1: " + puzzle.GetAnswerOne());
-            Console.WriteLine("2: " + puzzle.GetAnswerTwo());
+            // warm up
+            Console.WriteLine($"Running puzzle {puzzle.PuzzleNumber}");
+            puzzle.GetAnswerOne();
+            puzzle.GetAnswerTwo();
+
+            Stopwatch sw = Stopwatch.StartNew();
+            Console.WriteLine($"1: {puzzle.GetAnswerOne()}");
+            Console.WriteLine($"elapsed msec: {sw.ElapsedMilliseconds} - ticks: {sw.ElapsedTicks}");
+            Console.WriteLine();
+            
+            sw = Stopwatch.StartNew();
+            Console.WriteLine($"2: {puzzle.GetAnswerTwo()}");
+            Console.WriteLine($"elapsed msec: {sw.ElapsedMilliseconds} - ticks: {sw.ElapsedTicks}");
+            Console.WriteLine();
+
 
             Console.ReadKey();
         }
