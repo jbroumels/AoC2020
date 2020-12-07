@@ -13,7 +13,7 @@
 
             int jumpX = 3;
             int jumpY = 1;
-            return GetAnswer(x,y, jumpX, jumpY);
+            return CountTrees(x,y, jumpX, jumpY);
         }
 
         public override object GetAnswerTwo()
@@ -21,20 +21,20 @@
             int y = 0;
             int x = 0;
 
-            long answer2 = GetAnswer(x, y, 1, 1);
-            answer2 = answer2 * GetAnswer(x, y, 3, 1);
-            answer2 = answer2 * GetAnswer(x, y, 5, 1);
-            answer2 = answer2 * GetAnswer(x, y, 7, 1);
-            answer2 = answer2 * GetAnswer(x, y, 1, 2);
+            long answer2 = CountTrees(x, y, 1, 1);
+            answer2 = answer2 * CountTrees(x, y, 3, 1);
+            answer2 = answer2 * CountTrees(x, y, 5, 1);
+            answer2 = answer2 * CountTrees(x, y, 7, 1);
+            answer2 = answer2 * CountTrees(x, y, 1, 2);
 
             return answer2;
         }
 
 
-        public int GetAnswer(int x, int y, int jumpX, int jumpY)
+        private int CountTrees(int startX, int startY, int jumpX, int jumpY)
         {
-            y = y + jumpY;
-            x = x + jumpX;
+            int y = startX + jumpY;
+            int x = startY + jumpX;
 
             int treeCount = 0;
 
