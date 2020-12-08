@@ -13,9 +13,13 @@
     <None Remove="05.txt" />
     <None Remove="06.txt" />
     <None Remove="07.txt" />
+    <None Remove="08.txt" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="08.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="07.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
