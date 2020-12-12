@@ -59,6 +59,7 @@ namespace AoC
             // find arrangements
 
             ConcurrentDictionary<int, long> d = new ConcurrentDictionary<int, long>();
+            // insert the known first one as a dummy
             d.TryAdd(0, 1);
             
             long arrangements = FindArrangements(d, adapters, high + 3);
