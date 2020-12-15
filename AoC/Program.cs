@@ -19,7 +19,8 @@ namespace AoC
             //Puzzle puzzle = new PuzzleTen();
             //Puzzle puzzle = new PuzzleEleven();
             //Puzzle puzzle = new PuzzleTwelve();
-            Puzzle puzzle = new PuzzleThirteen();
+            //Puzzle puzzle = new PuzzleThirteen();
+            Puzzle puzzle = new PuzzleFourteen();
 
             // warm up
             Console.WriteLine($"Running puzzle {puzzle.PuzzleNumber}");
